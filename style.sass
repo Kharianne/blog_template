@@ -1,0 +1,21 @@
+$primary-color: #3F3250
+$base: #C0B3A0
+$complementary: #22252C
+$highlights: #E14658
+
+h1
+  color: $primary-color
+
+body
+  background-color: $base
+  color: $complementary
+
+%navbar-style
+    background-color: $complementary
+    color: $base
+
+.navbar
+  @extend %navbar-style
+.navbar-brand
+  @extend %navbar-style
+  font-weight: bold
