@@ -4,9 +4,22 @@ $primary-color: #3F3250
 $base: #C0B3A0
 /* navy */
 $complementary: #22252C
-/* coral */
+/* coral
 $highlights: #E14658
 
+
+h1
+  font-weight: bold
+
+@media (max-width: 576px)
+  h1
+    font-size: 1.5rem
+    margin-left: 0.5
+
+  .navbar a.w-25
+    width: initial !important
+h3
+  font-weight: bold
 
 body
   background-color: $base
@@ -21,7 +34,7 @@ body
 .navbar
   @extend %navbar-style
   border-bottom: 10px solid $highlights
-  font-size: 1.5em
+
 
 .navbar a
   @extend %navbar-style
@@ -34,7 +47,7 @@ body
 .navbar-brand
   @extend %navbar-style
   color: $highlights !important
-  font-size: 1.75em
+
 
 .navbar-toggler
   border: 2px solid $highlights
