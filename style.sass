@@ -7,6 +7,25 @@ $complementary: #22252C
 /* coral
 $highlights: #E14658
 
+$footer-height: 70px
+
+html
+  min-height: 100%
+  position: relative
+
+  body
+    margin-bottom: $footer-height + 20px
+    background-color: $base
+    color: $complementary
+
+  .footer-row
+    background-color: $complementary
+    border-top: 10px solid
+    border-color: $highlights
+    height: $footer-height
+    bottom: 0
+    width: 100%
+    position: absolute
 
 h1
   font-weight: bold
@@ -20,10 +39,6 @@ h1
     width: initial !important
 h3
   font-weight: bold
-
-body
-  background-color: $base
-  color: $complementary
 
 %navbar-style
     background-color: $complementary
@@ -73,10 +88,10 @@ body
   border-color: $highlights
   box-shadow: 0 0 0 .2rem rgba(225,70,88,.25)
 
-.main-row
-  height: 100vh
-
 $divider-border-style: 5px solid $highlights
+
+.main-row
+  margin-bottom: 70px
 
 .divider-left
   border-left: $divider-border-style
@@ -84,8 +99,11 @@ $divider-border-style: 5px solid $highlights
 .divider-right
   border-right: $divider-border-style
 
-.footer-row
-  height: 10vh
+.card-header
+  background-color: $primary-color
+  color: $base
+  font-family: 'Oswald', sans-serif
+
+.card-body, .card-text
   background-color: $complementary
-  border-top: 10px solid
-  border-color: $highlights
+  color: $base
