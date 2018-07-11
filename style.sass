@@ -72,3 +72,24 @@ body
 .form-control:focus
   border-color: $highlights
   box-shadow: 0 0 0 .2rem rgba(225,70,88,.25)
+
+.main-row
+  height: 100vh
+
+%divider
+    border-color: $highlights
+    $border-style: 5px solid
+
+.divider-left
+  @extend divider
+  border-left: $border-style
+
+.divider-right
+  @extend divider
+  border-right: $border-style
+
+.footer-row
+  height: 10vh
+  background-color: $complementary
+  border-top: 10px solid
+  border-color: $highlights
