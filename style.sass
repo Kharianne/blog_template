@@ -8,10 +8,14 @@ $complementary: #22252C
 $highlights: #E14658
 
 $footer-height: 70px
+$header-font: 'Oswald', sans-serif
+$text-font: 'Open Sans', sans-serif
+
 
 html
   min-height: 100%
   position: relative
+
 
   body
     margin-bottom: $footer-height + 20px
@@ -24,8 +28,9 @@ html
     border-color: $highlights
     height: $footer-height
     bottom: 0
-    width: 100%
     position: absolute
+    color: $base
+    width: 100%
 
 h1
   font-weight: bold
@@ -44,20 +49,32 @@ h3
     background-color: $complementary
     color: $base
     font-weight: bold
-    font-family: 'Oswald', sans-serif
+    font-family: $header-font
+
+%link-style
+  text-decoration: none
+  color: $base
 
 .navbar
   @extend %navbar-style
   border-bottom: 10px solid $highlights
 
+.post-link
+  @extend %link-style
 
+
+.post-link:hover
+  @extend %link-style
+  color: $highlights
 .navbar a
   @extend %navbar-style
-  text-decoration: none
-
+  @extend %link-style
 
 .navbar a:hover
+  @extend %link-style
   color: $highlights
+
+  @extend %link-style
 
 .navbar-brand
   @extend %navbar-style
@@ -99,13 +116,42 @@ $divider-border-style: 5px solid $highlights
 .divider-right
   border-right: $divider-border-style
 
+.card
+  border: 1px transparent
+  background-color: transparent
+
 .blog-post-header
   background-color: $primary-color
   color: $base
-  font-family: 'Oswald', sans-serif
+  font-family: $header-font
 
 .blog-post-body, .blog-post-text
   background-color: $complementary
   color: $base
-  font-family: 'Open Sans', sans-serif
+  font-family: $text-font
+  font-size: 1.25rem
+
+.quote-card-body, .quote-card-text
+  background-color: $complementary
+  font-family: $text-font
+  color: $base
+  font-size: 1.5rem
+  font-style: oblique
+
+
+.quote-card-footer
+  background-color: $primary-color
+  color: $base
+  font-family: $header-font
+  font-style: oblique
+
+
+.edge-to-edge
+  padding-left: 0px !important
+  padding-right: 0px !important
+
+.list-group, .list-group-item
+  background-color: #434855
+  color: $base
+  font-family: $text-font
   font-size: 1.25rem
