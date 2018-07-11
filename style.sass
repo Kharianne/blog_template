@@ -76,17 +76,13 @@ body
 .main-row
   height: 100vh
 
-%divider
-    border-color: $highlights
-    $border-style: 5px solid
+$divider-border-style: 5px solid $highlights
 
 .divider-left
-  @extend divider
-  border-left: $border-style
+  border-left: $divider-border-style
 
 .divider-right
-  @extend divider
-  border-right: $border-style
+  border-right: $divider-border-style
 
 .footer-row
   height: 10vh
